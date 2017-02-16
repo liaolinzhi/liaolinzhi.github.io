@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+	* {
+		margin:0px;
+		padding:0px;
+	}
+	 input,button,select,textarea {
+		 outline:none;
+		 border:0px;
+		 }
+	 textarea{resize:none}
+	#head {
+		margin:0 auto;
+		width:1000px;
+		height:293.376px;
+	}
+	#lg{
+		/*background-image:url(bd_logo1.png);*/		
+		width:641px;
+		height:181.3px;
+		margin:0 auto;
+		padding-top:44px;
+		box-sizing:border-box;
+	}
+	#lg_img {
+		display:block;
+		margin:0 auto;
+		width:270px;
+		height:129px;
+	}
+	#content {
+		margin:0 auto;
+		width:641px;
+		height:40px;
+		}
+	#content_main {
+		float:left;
+		border:1px solid #38f;
+		border-right:none;
+		width:536px;
+		height:40px;
+		padding-top:10px;
+		padding-left:7px;
+		box-sizing:border-box;
+	}
+	#content_text {
+		font-size:16px;
+		width:481px;
+		height:21px;
+	}
+	#content_submit {
+		width:102px;
+		height:40px;
+		background:#38f;
+		color:#FFF;
+		font-size:16px;
+	}
+	#mouse {
+		position:absolute;
+		background:#000;
+		background:url(mouse.png);
+		background-repeat:no-repeat;
+		width:12px;
+		height:19px;
+		
+	}
+</style>
+</head>
+
+<body onload="b()">
+<div id="head">
+	<div id="lg">
+    	<img id="lg_img" src="bd_logo1.png" />
+    </div>
+    <div id="content">
+    	<div id="content_main">
+        	<input id="content_text" type="text">
+        </div>
+        <input id="content_submit" type="submit" value="百度一下">
+    </div>
+</div>
+<div id="mouse" style="top:100px; left:100px;">
+</div>
+</body>
+<script>
+	var mouse_1;
+	
+	var i = 100;
+	var m = document.getElementById("mouse");
+	var inp = document.getElementById("content_text");
+	function a(){		
+		i=i+2;
+		m.style.top = i+"px";
+		if(i==200){
+			window.clearInterval(mouse_1);
+			mouse_1 = setInterval("c()",50);
+		}
+	}
+	function c(){
+		m.style.left = parseInt(m.style.left)+2+"px";
+		if(parseInt(m.style.left)==500){
+			window.clearInterval(mouse_1);
+			mouse_1 = setInterval("d()",50);
+		}
+	}
+	function d(){
+		inp.value = "请输入你的问题？";
+		window.clearInterval(mouse_1);
+		m.style.display = "none";
+	}
+	function b(){
+		mouse_1 = setInterval("a()",50);
+	}
+</script>
+</html>
