@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">  
 <html>  
  <head>  
-  <title> ³é½±»î¶¯ </title>  
+  <title> æŠ½å¥–æ´»åŠ¨ </title>  
   <meta name="Generator" content="EditPlus">  
   <meta name="Author" content="">  
   <meta name="Keywords" content="">  
@@ -12,9 +12,9 @@
     
 <html>  
 <head>  
-<meta http-equiv="Content-Type" content="text/html;charset=gb2312"/>  
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>  
 <meta http-equiv="Content-Language" content="zh-CN"/>    
-<title>³é½±»î¶¯</title>  
+<title>æŠ½å¥–æ´»åŠ¨</title>  
 <style type="text/css">  
 body {padding-top:100px;font:12px "\5B8B\4F53",sans-serif;text-align:center;}  
 .result_box {margin:0 auto;width:700px;padding:100px 0;text-align:center;border:3px solid #40AA53;background:#efe;}  
@@ -25,8 +25,8 @@ body {padding-top:100px;font:12px "\5B8B\4F53",sans-serif;text-align:center;}
 </head>     
 <body>  
 <script type="text/javascript">  
-//³é½±Êı¾İ£¬ÒÔÓ¢ÎÄ¶ººÅ·Ö¸ô  
-var alldata = "³ÂÒÕµ¤,ÁÎÁÖÖ¾,Ò¶Çå»ª,Ò¶±±´ó,ÁÎÖ¾ÁÖ,³ÂÄ³µ°,µ°Êå";    
+//æŠ½å¥–æ•°æ®ï¼Œä»¥è‹±æ–‡é€—å·åˆ†éš”  
+var alldata = "é™ˆè‰ºä¸¹,å»–æ—å¿—,å¶æ¸…å,å¶åŒ—å¤§,å»–å¿—æ—,é™ˆæŸè›‹,è›‹å”";    
 var alldataarr = alldata.split(",");    
 var num = alldataarr.length-1;  
 var timer;  
@@ -35,13 +35,13 @@ function change(){
 }  
 function start(){     
     clearInterval(timer);     
-    timer = setInterval('change()',46); //Ëæ»úÊı¾İ±ä»»ËÙ¶È£¬Ô½Ğ¡±ä»»µÄÔ½¿ì     
+    timer = setInterval('change()',46); //éšæœºæ•°æ®å˜æ¢é€Ÿåº¦ï¼Œè¶Šå°å˜æ¢çš„è¶Šå¿«     
 }  
 function ok(){     
     clearInterval(timer);     
-    //ÒÔÏÂ´úÂë±íÊ¾»ñµÃ½±µÄ£¬²»ÄÜÔÙ»ñ½±ÁË¡£  ÖØÖÃË¢ĞÂÒ³Ãæ¼´¿É¡£  
+    //ä»¥ä¸‹ä»£ç è¡¨ç¤ºè·å¾—å¥–çš„ï¼Œä¸èƒ½å†è·å¥–äº†ã€‚  é‡ç½®åˆ·æ–°é¡µé¢å³å¯ã€‚  
     alldata = alldata.replace(document.getElementById("oknum").value,"").replace(",,",",");  
-    // È¥µôÇ°ÖÃ£¬×îÄ©Î²µÄ,  
+    // å»æ‰å‰ç½®ï¼Œæœ€æœ«å°¾çš„,  
     if (alldata.substr(0,1)==",")  
     {  
       alldata = alldata.substr(1,alldata.length);  
@@ -57,8 +57,8 @@ function GetRnd(min,max){
     return parseInt(Math.random()*(max-min+1));     
 }  
 </script>  
-<div class="result_box"><input type="text" id="oknum" name="oknum" value="³é½±½á¹û" /></div>  
-<div class="button_box"><button class="btn" onclick="start()" accesskey="s">¿ªÊ¼(<U>S</U>)</button><button class="btn" onclick="ok()" accesskey="o">Í£Ö¹(<U>O</U>)</button></div>  
+<div class="result_box"><input type="text" id="oknum" name="oknum" value="æŠ½å¥–ç»“æœ" /></div>  
+<div class="button_box"><button class="btn" onclick="start()" accesskey="s">å¼€å§‹(<U>S</U>)</button><button class="btn" onclick="ok()" accesskey="o">åœæ­¢(<U>O</U>)</button></div>  
 </body>     
 </html>  
  </body>  
